@@ -1,6 +1,19 @@
--- Script generado automaticamente para cargar los 33 .csv a la tabla MOV_EP1_EQUIPO_09
--- Ejecutar en psql tool con: \i 'C:/datos/script_carga.sql'
--- Los CSV deben estar en C:\datos\mov
+-- =====================================================
+-- EQUIPO_09 - IDY1103 - EP1
+-- PASO A.4 (parte 2): Insertar registros a las tres tablas
+-- =====================================================
+
+-- Script generado automaticamente para cargar los 35 .csv a las 3 tablas: 
+-- CLASE_MOV_EP1_EQUIPO_09, CENTROS_EP1_EQUIPO_09 y MOV_EP1_EQUIPO_09
+
+-- 1. 'clase_mov.csv', 'centros.csv' y este archivo '05_A4_insertar_datos_csv.sql' deben estar en C:\datos
+-- 2. Los 33 .csv de mov deben estar dentro de una carpeta así C:\datos\mov
+
+-- 3. Ejecutar solo una vez en psql tool con: \i 'C:/datos/05_A4_insertar_datos_csv.sql'
+
+\copy public."CLASE_MOV_EP1_EQUIPO_09" FROM 'C:/datos/clase_mov.csv' WITH (FORMAT csv, DELIMITER ';', HEADER true, ENCODING 'UTF8')
+
+\copy public."CENTROS_EP1_EQUIPO_09" FROM 'C:/datos/centros.csv' WITH (FORMAT csv, DELIMITER ';', HEADER true, ENCODING 'UTF8')
 
 \copy public."MOV_EP1_EQUIPO_09" FROM 'C:/datos/mov/mov_pa1.csv' WITH (FORMAT csv, DELIMITER ';', HEADER true, ENCODING 'UTF8')
 \copy public."MOV_EP1_EQUIPO_09" FROM 'C:/datos/mov/mov_paso1.csv' WITH (FORMAT csv, DELIMITER ';', HEADER true, ENCODING 'UTF8')
@@ -35,5 +48,4 @@
 \copy public."MOV_EP1_EQUIPO_09" FROM 'C:/datos/mov/mov_paso30.csv' WITH (FORMAT csv, DELIMITER ';', HEADER true, ENCODING 'UTF8')
 \copy public."MOV_EP1_EQUIPO_09" FROM 'C:/datos/mov/mov_paso31.csv' WITH (FORMAT csv, DELIMITER ';', HEADER true, ENCODING 'UTF8')
 \copy public."MOV_EP1_EQUIPO_09" FROM 'C:/datos/mov/mov_paso32.csv' WITH (FORMAT csv, DELIMITER ';', HEADER true, ENCODING 'UTF8')
-
 

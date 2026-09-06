@@ -23,7 +23,7 @@ CREATE TABLE "CENTROS_EP1_EQUIPO_09" (
 );
 
 -- ============ TABLA TRANSACCIONAL: MOV ============
--- Corresponde a la estructura de mov_pa1 (cargar_mov_pa1.sql)
+-- Corresponde a la estructura de los 32 archivos mov.csv
 CREATE TABLE "MOV_EP1_EQUIPO_09" (
     "Material" VARCHAR,
     "Texto breve de material" VARCHAR,
